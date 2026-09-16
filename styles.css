@@ -1,0 +1,254 @@
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --border: #e2ded4;
+  --text: #24211c;
+  --muted: #6b665c;
+  --accent: #3f6f4d;
+  --radius: 8px;
+  --space: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--space);
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.app-main {
+  display: grid;
+  gap: var(--space);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  margin-top: var(--space);
+  align-items: start;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: inherit;
+  margin-bottom: var(--space);
+}
+
+button {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  background: transparent;
+  color: var(--accent);
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0 0 var(--space);
+  padding: var(--space);
+}
+
+legend {
+  color: var(--muted);
+  font-size: 0.875rem;
+  padding: 0 0.35rem;
+}
+
+.recipe-list,
+.ingredient-list,
+.rating-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe-list li,
+.ingredient-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.rating-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.rating-list li {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8125rem;
+}
+
+.nutrition-totals {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 1rem;
+  margin: 0 0 var(--space);
+}
+
+.nutrition-totals dt {
+  color: var(--muted);
+}
+
+.nutrition-totals dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ingredient-row input {
+  margin-bottom: 0;
+}
+
+.remove-ingredient {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.problems {
+  list-style: none;
+  margin: 0 0 var(--space);
+  padding: 0;
+  color: #9a3412;
+}
+
+.problems:empty {
+  margin: 0;
+}
+
+.problems li {
+  padding: 0.2rem 0;
+  font-size: 0.875rem;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.recipe-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space);
+}
+
+.recipe-list li.is-open {
+  font-weight: 600;
+}
+
+button.link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+.list-actions {
+  margin-top: var(--space);
+}
+
+.list-actions button {
+  background: transparent;
+  color: var(--accent);
+}
+
+.list-actions button:disabled {
+  border-color: var(--border);
+  color: var(--muted);
+  cursor: default;
+}
+
+.form-actions {
+  flex-wrap: wrap;
+}
+
+#export-recipe,
+#copy-recipe {
+  background: transparent;
+  color: var(--accent);
+}
+
+.share-status {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+}
+
+.share-status:empty {
+  margin: 0;
+}

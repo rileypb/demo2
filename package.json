@@ -1,0 +1,15 @@
+{
+  "name": "nutribook",
+  "version": "0.1.0",
+  "description": "Local nutrition value calculator for storing, searching, and rating recipes.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "test:watch": "node --test --watch \"test/**/*.test.js\"",
+    "start": "python3 -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
